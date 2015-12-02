@@ -1,6 +1,8 @@
 var mkdirp = require('mkdirp');
 
-mkdirp('tmp/foo/bar/baz', function (err) {
-    if (err) console.error(err)
-    else console.log('pow!')
+var args = process.argv;
+
+mkdirp(args[2], function (err) {
+    if (err) console.error(err);
+    else console.log('$ ' + args[2] + ' created');
 });
