@@ -1,8 +1,8 @@
 var mkdirp = require('mkdirp');
 
-var args = process.argv;
+var args = process.argv[2];
 
-mkdirp(args[2], function (err) {
+mkdirp(args, function (err) {
     if (err) console.error(err);
-    else console.log('$ ' + args[2] + ' created');
+    else console.log('$ ' + args + ' created');
 });
